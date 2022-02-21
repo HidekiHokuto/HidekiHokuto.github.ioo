@@ -452,7 +452,46 @@ e^{i \theta} = \cos \theta + i \sin \theta
 \begin{equation}
     y = \sum_{n=0}^\infty C_n x^{n+s} \qquad (C_0 \neq 0,\ s \mathrm{\ is\ an\ unknown\ constant})
 \end{equation}</script><p><strong>例</strong></p>
-<script type="math/tex; mode=display">(x-x^2)y''+(a-3x)y'-y=0</script>]]></content>
+<script type="math/tex; mode=display">(x-x^2)y''+(a-3x)y'-y=0</script><p><strong>解</strong></p>
+<script type="math/tex; mode=display">
+\begin{align*}
+    y &= \sum_{0} C_n x^{n+s}\\
+    y' &= \sum_{0} C_n (n+s) x^{n+s-1}\\
+    y'' &= \sum_{0} C_n (n+1)(n+s-1) x^{n+s-2}
+\end{align*}</script><p>代入原式</p>
+<script type="math/tex; mode=display">
+\begin{align}
+    \sum_0 C_n (n+1)(n+s-1) x^{n+s-1} - \sum_0 C_n (n+1)(n+s-1) x^{n+s}\\
+    +\sum_0 a\ C_n (n+s) x^{n+s-1} - \sum_0 3 C_n (n+s) x^{n+s} - \sum_0 C_n x^{n+s}=0
+\end{align}</script><p>对第二，四，五项变量替换，令$m=n+1,\ n=m-1$.</p>
+<p>得到</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+    -\sum_1 C_{m-1}\cdot x^{m+s-1} \cdot \left[
+    (m+s-1)(m+s-2)+3(m+s-1)+1
+    \right]
+\end{equation}</script><p>并入原本的式子，将求和第0项提出</p>
+<script type="math/tex; mode=display">
+\begin{align}
+    C_0 [s(s-1)+as]x^{s-1} + \sum_1 (\cdots) =0
+\end{align}</script><p>让每项系数为0，可得</p>
+<script type="math/tex; mode=display">
+\begin{align}
+    C_0 [s(s-1)+as] = 0\\
+    s(s-1+a) = 0\\
+    s = 0,\ 1-a
+\end{align}</script><div align="right">
+  $\blacksquare$
+</div>
+
+<p><strong>笔记</strong></p>
+<p>对指数大的项变换.</p>
+<h1 id="贝塞尔方程的广义幂级数解"><a href="#贝塞尔方程的广义幂级数解" class="headerlink" title="贝塞尔方程的广义幂级数解"></a>贝塞尔方程的广义幂级数解</h1><h2 id="贝塞尔方程"><a href="#贝塞尔方程" class="headerlink" title="贝塞尔方程"></a>贝塞尔方程</h2><p>满足如下形式的方程称作贝塞尔方程.</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+    x^2 \frac{d^2 y}{d x^2} + x\frac{d y}{d x} + (x^2-\nu^2)y = 0
+    \qquad (x > 0)
+\end{equation}</script>]]></content>
       <tags>
         <tag>贝塞尔函数</tag>
         <tag>数学</tag>
