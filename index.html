@@ -227,7 +227,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-02-22 03:42:22 / Modified: 03:52:47" itemprop="dateCreated datePublished" datetime="2022-02-22T03:42:22+08:00">2022-02-22</time>
+              <time title="Created: 2022-02-22 03:42:22 / Modified: 04:02:27" itemprop="dateCreated datePublished" datetime="2022-02-22T03:42:22+08:00">2022-02-22</time>
             </span>
 
           <br>
@@ -236,7 +236,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>84</span>
+              <span>561</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -255,11 +255,30 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="伽马函数"><a href="#伽马函数" class="headerlink" title="伽马函数"></a>伽马函数</h1><p><strong>定义</strong> 伽马函数的定义为</p>
+          <h1 id="伽马函数"><a href="#伽马函数" class="headerlink" title="伽马函数"></a>伽马函数</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>伽马函数的定义为</p>
 <script type="math/tex; mode=display">
 \begin{equation}
-                \Gamma(x) = \int_0^\infty e^{-t}\ t^{x-1}\ d t
-            \end{equation}</script>
+    \Gamma(x) = \int_0^\infty e^{-t}\ t^{x-1}\ d t
+\end{equation}</script><h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><ul>
+<li>$\Gamma(x+1) = x\Gamma(x)$</li>
+<li>$\Gamma(n+1) = n!\quad (n = 0,1,2,\cdots)$</li>
+<li>$\Gamma(-n) \rightarrow \infty \quad (n = 0,1,2,\cdots)$</li>
+<li>$\Gamma(1) = 1,\ \Gamma\left(\frac12\right) = \sqrt{\pi}$</li>
+</ul>
+<h1 id="广义幂级数"><a href="#广义幂级数" class="headerlink" title="广义幂级数"></a>广义幂级数</h1><p>对于二阶常微分方程</p>
+<script type="math/tex; mode=display">
+        \begin{equation}
+            y''+P(x)y'+Q(x)y=0
+        \end{equation}</script><pre><code>    如果想得到$x=a$展开的幂级数解，需要考察其是否为奇点.
+    如果$xP(x), x^2Q(x)$都能在附近领域内收敛，则解可以展开为该点附近的幂级数.
+
+    特别的$x=0$附近的展开
+    $$
+    \begin&#123;equation&#125;
+        y = \sum_&#123;n=0&#125;^\infty C_n x^&#123;n+s&#125; \qquad (C_0 \neq 0,\ s \mathrm&#123;\ is\ an\ unknown\ constant&#125;)
+    \end&#123;equation&#125;
+    $$
+</code></pre>
       
     </div>
 
