@@ -491,6 +491,49 @@ e^{i \theta} = \cos \theta + i \sin \theta
 \begin{equation}
     x^2 \frac{d^2 y}{d x^2} + x\frac{d y}{d x} + (x^2-\nu^2)y = 0
     \qquad (x > 0)
+\end{equation}</script><p>此处对$\nu$没有正负要求，可以为任意实数. 但为了便利，通常要求为正实数.</p>
+<p>得到指标方程</p>
+<script type="math/tex; mode=display">
+\begin{align}
+    &C_0(s^2 - \nu^2) = 0\\
+    &C_1 [(s+1)^2-\nu^2] = 0\\
+    &C_n
+        [
+            (s+n)^2-\nu^2 
+        ]+ C_{n-2} = 0
+\end{align}</script><p>若$C_0\neq 0$，有$s = \pm \nu$.</p>
+<h3 id="第一特解"><a href="#第一特解" class="headerlink" title="第一特解"></a>第一特解</h3><p>先考虑$s = \nu$</p>
+<p>此时由$C_1$的方程可知，$C_1 = 0$，所以所有奇数项系数为0.</p>
+<p>此时的递推式</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+    C_n = \frac{-1}{n(n+2\nu)}C_{n-2}\qquad (n \geq 2)
+\end{equation}</script><p>且因为只有偶数项</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+    C_{2m} = \frac{-1}{2^2m(m+\nu)}C_{2m-2}\qquad (m \geq 1)
+\end{equation}</script><p>将所有项系数用$C_0$表示，整理可得到贝塞尔方程的一个特解.</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+    y = C_0 \sum_{m=0}^\infty
+    \frac{(-1)^m}{2^{2m}m!(1+\nu)(2+\nu)\cdots(m+\nu)}
+    x^{2m+\nu}
+\end{equation}</script><p>$C_0$若取</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+    C_0 = \frac{1}{2^\nu\ \Gamma (\nu+1)}
+\end{equation}</script><p>利用伽马函数的性质，该特解简写为</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+    J_\nu(x) = \sum_{m=0}^\infty
+    \frac{(-1)^m}{m!\ \Gamma(m+\nu+1)} \left(\frac{x}{2}\right)^{2m+\nu}
+\end{equation}</script><p>称作$\nu$阶第一类贝塞尔函数.</p>
+<p><strong>定义</strong> 整数阶贝塞尔函数</p>
+<p>当阶数为非负整数$\nu=n,\ (n=0,1,2,\cdots)$.</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+    J_n(x) = \sum_{m=0}^\infty
+    \frac{(-1)^m}{m!\ (m+n)!} \left(\frac{x}{2}\right)^{2m+n}
 \end{equation}</script>]]></content>
       <categories>
         <category>物理数学</category>
